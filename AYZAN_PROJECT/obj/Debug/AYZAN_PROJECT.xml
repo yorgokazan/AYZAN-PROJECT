@@ -1,0 +1,236 @@
+﻿<?xml version="1.0"?>
+<doc>
+<assembly>
+<name>
+AYZAN_PROJECT
+</name>
+</assembly>
+<members>
+<member name="T:AYZAN_PROJECT.My.Resources.Resources">
+<summary>
+  A strongly-typed resource class, for looking up localized strings, etc.
+</summary>
+</member>
+<member name="P:AYZAN_PROJECT.My.Resources.Resources.ResourceManager">
+<summary>
+  Returns the cached ResourceManager instance used by this class.
+</summary>
+</member>
+<member name="P:AYZAN_PROJECT.My.Resources.Resources.Culture">
+<summary>
+  Overrides the current thread's CurrentUICulture property for all
+  resource lookups using this strongly typed resource class.
+</summary>
+</member>
+<member name="P:AYZAN_PROJECT.My.Resources.Resources._46256c04_3de5_434f_a6c9_cc25937ead38">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="T:AYZAN_PROJECT.AYZAN_GROUPDataSet">
+<summary>
+Represents a strongly typed in-memory cache of data.
+</summary>
+</member>
+<member name="T:AYZAN_PROJECT.AYZAN_GROUPDataSet.BrandDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:AYZAN_PROJECT.AYZAN_GROUPDataSet.CarDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:AYZAN_PROJECT.AYZAN_GROUPDataSet.CategoryDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:AYZAN_PROJECT.AYZAN_GROUPDataSet.ClientDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:AYZAN_PROJECT.AYZAN_GROUPDataSet.ColorDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:AYZAN_PROJECT.AYZAN_GROUPDataSet.ModelDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:AYZAN_PROJECT.AYZAN_GROUPDataSet.RentalDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:AYZAN_PROJECT.AYZAN_GROUPDataSet.StyleDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:AYZAN_PROJECT.AYZAN_GROUPDataSet.BrandRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:AYZAN_PROJECT.AYZAN_GROUPDataSet.CarRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:AYZAN_PROJECT.AYZAN_GROUPDataSet.CategoryRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:AYZAN_PROJECT.AYZAN_GROUPDataSet.ClientRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:AYZAN_PROJECT.AYZAN_GROUPDataSet.ColorRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:AYZAN_PROJECT.AYZAN_GROUPDataSet.ModelRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:AYZAN_PROJECT.AYZAN_GROUPDataSet.RentalRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:AYZAN_PROJECT.AYZAN_GROUPDataSet.StyleRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:AYZAN_PROJECT.AYZAN_GROUPDataSet.BrandRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:AYZAN_PROJECT.AYZAN_GROUPDataSet.CarRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:AYZAN_PROJECT.AYZAN_GROUPDataSet.CategoryRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:AYZAN_PROJECT.AYZAN_GROUPDataSet.ClientRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:AYZAN_PROJECT.AYZAN_GROUPDataSet.ColorRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:AYZAN_PROJECT.AYZAN_GROUPDataSet.ModelRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:AYZAN_PROJECT.AYZAN_GROUPDataSet.RentalRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:AYZAN_PROJECT.AYZAN_GROUPDataSet.StyleRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:AYZAN_PROJECT.AYZAN_GROUPDataSetTableAdapters.BrandTableAdapter">
+<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member>
+<member name="T:AYZAN_PROJECT.AYZAN_GROUPDataSetTableAdapters.CarTableAdapter">
+<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member>
+<member name="T:AYZAN_PROJECT.AYZAN_GROUPDataSetTableAdapters.CategoryTableAdapter">
+<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member>
+<member name="T:AYZAN_PROJECT.AYZAN_GROUPDataSetTableAdapters.ClientTableAdapter">
+<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member>
+<member name="T:AYZAN_PROJECT.AYZAN_GROUPDataSetTableAdapters.ColorTableAdapter">
+<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member>
+<member name="T:AYZAN_PROJECT.AYZAN_GROUPDataSetTableAdapters.ModelTableAdapter">
+<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member>
+<member name="T:AYZAN_PROJECT.AYZAN_GROUPDataSetTableAdapters.RentalTableAdapter">
+<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member>
+<member name="T:AYZAN_PROJECT.AYZAN_GROUPDataSetTableAdapters.StyleTableAdapter">
+<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member>
+<member name="T:AYZAN_PROJECT.AYZAN_GROUPDataSetTableAdapters.TableAdapterManager">
+<summary>
+TableAdapterManager is used to coordinate TableAdapters in the dataset to enable Hierarchical Update scenarios
+</summary>
+</member>
+<member name="M:AYZAN_PROJECT.AYZAN_GROUPDataSetTableAdapters.TableAdapterManager.UpdateUpdatedRows(AYZAN_PROJECT.AYZAN_GROUPDataSet,System.Collections.Generic.List{System.Data.DataRow},System.Collections.Generic.List{System.Data.DataRow})">
+<summary>
+Update rows in top-down order.
+</summary>
+</member>
+<member name="M:AYZAN_PROJECT.AYZAN_GROUPDataSetTableAdapters.TableAdapterManager.UpdateInsertedRows(AYZAN_PROJECT.AYZAN_GROUPDataSet,System.Collections.Generic.List{System.Data.DataRow})">
+<summary>
+Insert rows in top-down order.
+</summary>
+</member>
+<member name="M:AYZAN_PROJECT.AYZAN_GROUPDataSetTableAdapters.TableAdapterManager.UpdateDeletedRows(AYZAN_PROJECT.AYZAN_GROUPDataSet,System.Collections.Generic.List{System.Data.DataRow})">
+<summary>
+Delete rows in bottom-up order.
+</summary>
+</member>
+<member name="M:AYZAN_PROJECT.AYZAN_GROUPDataSetTableAdapters.TableAdapterManager.GetRealUpdatedRows(System.Data.DataRow[],System.Collections.Generic.List{System.Data.DataRow})">
+<summary>
+Remove inserted rows that become updated rows after calling TableAdapter.Update(inserted rows) first
+</summary>
+</member>
+<member name="M:AYZAN_PROJECT.AYZAN_GROUPDataSetTableAdapters.TableAdapterManager.UpdateAll(AYZAN_PROJECT.AYZAN_GROUPDataSet)">
+<summary>
+Update all changes to the dataset.
+</summary>
+</member>
+<member name="T:AYZAN_PROJECT.AYZAN_GROUPDataSetTableAdapters.TableAdapterManager.UpdateOrderOption">
+<summary>
+Update Order Option
+</summary>
+</member>
+<member name="T:AYZAN_PROJECT.AYZAN_GROUPDataSetTableAdapters.TableAdapterManager.SelfReferenceComparer">
+<summary>
+Used to sort self-referenced table's rows
+</summary>
+</member>
+</members>
+</doc>

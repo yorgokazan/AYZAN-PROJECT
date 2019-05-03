@@ -32,13 +32,14 @@ Partial Class main
         Me.COLORToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.BRANDToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.EXITToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.DAILYREPORTToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.MenuStrip1.SuspendLayout()
         Me.SuspendLayout()
         '
         'MenuStrip1
         '
         Me.MenuStrip1.ImageScalingSize = New System.Drawing.Size(20, 20)
-        Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.RENTALToolStripMenuItem, Me.CLIENTSToolStripMenuItem, Me.CARSToolStripMenuItem, Me.STYLEToolStripMenuItem, Me.CATEGORYToolStripMenuItem, Me.MODELToolStripMenuItem, Me.COLORToolStripMenuItem, Me.BRANDToolStripMenuItem, Me.EXITToolStripMenuItem})
+        Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.RENTALToolStripMenuItem, Me.CLIENTSToolStripMenuItem, Me.CARSToolStripMenuItem, Me.STYLEToolStripMenuItem, Me.CATEGORYToolStripMenuItem, Me.MODELToolStripMenuItem, Me.COLORToolStripMenuItem, Me.BRANDToolStripMenuItem, Me.DAILYREPORTToolStripMenuItem, Me.EXITToolStripMenuItem})
         Me.MenuStrip1.Location = New System.Drawing.Point(0, 0)
         Me.MenuStrip1.Name = "MenuStrip1"
         Me.MenuStrip1.Size = New System.Drawing.Size(1077, 28)
@@ -99,6 +100,12 @@ Partial Class main
         Me.EXITToolStripMenuItem.Size = New System.Drawing.Size(50, 24)
         Me.EXITToolStripMenuItem.Text = "EXIT"
         '
+        'DAILYREPORTToolStripMenuItem
+        '
+        Me.DAILYREPORTToolStripMenuItem.Name = "DAILYREPORTToolStripMenuItem"
+        Me.DAILYREPORTToolStripMenuItem.Size = New System.Drawing.Size(116, 24)
+        Me.DAILYREPORTToolStripMenuItem.Text = "DAILY REPORT"
+        '
         'main
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
@@ -129,4 +136,5 @@ Partial Class main
     Friend WithEvents COLORToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents BRANDToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents EXITToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents DAILYREPORTToolStripMenuItem As ToolStripMenuItem
 End Class

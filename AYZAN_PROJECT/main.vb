@@ -38,4 +38,13 @@
         brand.Show()
 
     End Sub
+
+    Private Sub main_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+
+    End Sub
+
+    Private Sub DAILYREPORTToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles DAILYREPORTToolStripMenuItem.Click
+        dailyReport.Show()
+
+    End Sub
 End Class

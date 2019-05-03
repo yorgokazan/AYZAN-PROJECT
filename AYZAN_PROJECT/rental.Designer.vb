@@ -23,29 +23,31 @@ Partial Class rental
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
-        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(rental))
         Dim Rental_idLabel As System.Windows.Forms.Label
         Dim Client_idLabel As System.Windows.Forms.Label
         Dim Car_idLabel As System.Windows.Forms.Label
         Dim R_dateLabel As System.Windows.Forms.Label
         Dim Current_kmLabel As System.Windows.Forms.Label
         Dim TotalLabel As System.Windows.Forms.Label
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(rental))
         Me.AYZAN_GROUPDataSet = New AYZAN_PROJECT.AYZAN_GROUPDataSet()
         Me.RentalBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.RentalTableAdapter = New AYZAN_PROJECT.AYZAN_GROUPDataSetTableAdapters.RentalTableAdapter()
         Me.TableAdapterManager = New AYZAN_PROJECT.AYZAN_GROUPDataSetTableAdapters.TableAdapterManager()
+        Me.CarTableAdapter = New AYZAN_PROJECT.AYZAN_GROUPDataSetTableAdapters.CarTableAdapter()
+        Me.ClientTableAdapter = New AYZAN_PROJECT.AYZAN_GROUPDataSetTableAdapters.ClientTableAdapter()
         Me.RentalBindingNavigator = New System.Windows.Forms.BindingNavigator(Me.components)
+        Me.BindingNavigatorAddNewItem = New System.Windows.Forms.ToolStripButton()
+        Me.BindingNavigatorCountItem = New System.Windows.Forms.ToolStripLabel()
+        Me.BindingNavigatorDeleteItem = New System.Windows.Forms.ToolStripButton()
         Me.BindingNavigatorMoveFirstItem = New System.Windows.Forms.ToolStripButton()
         Me.BindingNavigatorMovePreviousItem = New System.Windows.Forms.ToolStripButton()
         Me.BindingNavigatorSeparator = New System.Windows.Forms.ToolStripSeparator()
         Me.BindingNavigatorPositionItem = New System.Windows.Forms.ToolStripTextBox()
-        Me.BindingNavigatorCountItem = New System.Windows.Forms.ToolStripLabel()
         Me.BindingNavigatorSeparator1 = New System.Windows.Forms.ToolStripSeparator()
         Me.BindingNavigatorMoveNextItem = New System.Windows.Forms.ToolStripButton()
         Me.BindingNavigatorMoveLastItem = New System.Windows.Forms.ToolStripButton()
         Me.BindingNavigatorSeparator2 = New System.Windows.Forms.ToolStripSeparator()
-        Me.BindingNavigatorAddNewItem = New System.Windows.Forms.ToolStripButton()
-        Me.BindingNavigatorDeleteItem = New System.Windows.Forms.ToolStripButton()
         Me.RentalBindingNavigatorSaveItem = New System.Windows.Forms.ToolStripButton()
         Me.RentalDataGridView = New System.Windows.Forms.DataGridView()
         Me.DataGridViewTextBoxColumn1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
@@ -61,12 +63,10 @@ Partial Class rental
         Me.Current_kmTextBox = New System.Windows.Forms.TextBox()
         Me.TotalTextBox = New System.Windows.Forms.TextBox()
         Me.ClientBindingSource = New System.Windows.Forms.BindingSource(Me.components)
-        Me.ClientTableAdapter = New AYZAN_PROJECT.AYZAN_GROUPDataSetTableAdapters.ClientTableAdapter()
         Me.ClientDataGridView = New System.Windows.Forms.DataGridView()
         Me.DataGridViewTextBoxColumn7 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.DataGridViewTextBoxColumn8 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.CarBindingSource = New System.Windows.Forms.BindingSource(Me.components)
-        Me.CarTableAdapter = New AYZAN_PROJECT.AYZAN_GROUPDataSetTableAdapters.CarTableAdapter()
         Me.CarDataGridView = New System.Windows.Forms.DataGridView()
         Me.DataGridViewTextBoxColumn9 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.DataGridViewTextBoxColumn11 = New System.Windows.Forms.DataGridViewTextBoxColumn()
@@ -75,6 +75,7 @@ Partial Class rental
         Me.DataGridViewTextBoxColumn14 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Button1 = New System.Windows.Forms.Button()
+        Me.DataGridView1 = New System.Windows.Forms.DataGridView()
         Rental_idLabel = New System.Windows.Forms.Label()
         Client_idLabel = New System.Windows.Forms.Label()
         Car_idLabel = New System.Windows.Forms.Label()
@@ -90,7 +91,62 @@ Partial Class rental
         CType(Me.ClientDataGridView, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.CarBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.CarDataGridView, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
+        '
+        'Rental_idLabel
+        '
+        Rental_idLabel.AutoSize = True
+        Rental_idLabel.Location = New System.Drawing.Point(37, 47)
+        Rental_idLabel.Name = "Rental_idLabel"
+        Rental_idLabel.Size = New System.Drawing.Size(25, 17)
+        Rental_idLabel.TabIndex = 2
+        Rental_idLabel.Text = "ID:"
+        '
+        'Client_idLabel
+        '
+        Client_idLabel.AutoSize = True
+        Client_idLabel.Location = New System.Drawing.Point(37, 75)
+        Client_idLabel.Name = "Client_idLabel"
+        Client_idLabel.Size = New System.Drawing.Size(60, 17)
+        Client_idLabel.TabIndex = 4
+        Client_idLabel.Text = "CLIENT:"
+        '
+        'Car_idLabel
+        '
+        Car_idLabel.AutoSize = True
+        Car_idLabel.Location = New System.Drawing.Point(37, 106)
+        Car_idLabel.Name = "Car_idLabel"
+        Car_idLabel.Size = New System.Drawing.Size(40, 17)
+        Car_idLabel.TabIndex = 6
+        Car_idLabel.Text = "CAR:"
+        '
+        'R_dateLabel
+        '
+        R_dateLabel.AutoSize = True
+        R_dateLabel.Location = New System.Drawing.Point(37, 138)
+        R_dateLabel.Name = "R_dateLabel"
+        R_dateLabel.Size = New System.Drawing.Size(108, 17)
+        R_dateLabel.TabIndex = 8
+        R_dateLabel.Text = "RENTAL DATE:"
+        '
+        'Current_kmLabel
+        '
+        Current_kmLabel.AutoSize = True
+        Current_kmLabel.Location = New System.Drawing.Point(37, 165)
+        Current_kmLabel.Name = "Current_kmLabel"
+        Current_kmLabel.Size = New System.Drawing.Size(103, 17)
+        Current_kmLabel.TabIndex = 10
+        Current_kmLabel.Text = "CURRENT KM:"
+        '
+        'TotalLabel
+        '
+        TotalLabel.AutoSize = True
+        TotalLabel.Location = New System.Drawing.Point(37, 193)
+        TotalLabel.Name = "TotalLabel"
+        TotalLabel.Size = New System.Drawing.Size(58, 17)
+        TotalLabel.TabIndex = 12
+        TotalLabel.Text = "TOTAL:"
         '
         'AYZAN_GROUPDataSet
         '
@@ -119,6 +175,14 @@ Partial Class rental
         Me.TableAdapterManager.StyleTableAdapter = Nothing
         Me.TableAdapterManager.UpdateOrder = AYZAN_PROJECT.AYZAN_GROUPDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete
         '
+        'CarTableAdapter
+        '
+        Me.CarTableAdapter.ClearBeforeFill = True
+        '
+        'ClientTableAdapter
+        '
+        Me.ClientTableAdapter.ClearBeforeFill = True
+        '
         'RentalBindingNavigator
         '
         Me.RentalBindingNavigator.AddNewItem = Me.BindingNavigatorAddNewItem
@@ -138,13 +202,38 @@ Partial Class rental
         Me.RentalBindingNavigator.TabIndex = 0
         Me.RentalBindingNavigator.Text = "BindingNavigator1"
         '
+        'BindingNavigatorAddNewItem
+        '
+        Me.BindingNavigatorAddNewItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
+        Me.BindingNavigatorAddNewItem.Image = CType(resources.GetObject("BindingNavigatorAddNewItem.Image"), System.Drawing.Image)
+        Me.BindingNavigatorAddNewItem.Name = "BindingNavigatorAddNewItem"
+        Me.BindingNavigatorAddNewItem.RightToLeftAutoMirrorImage = True
+        Me.BindingNavigatorAddNewItem.Size = New System.Drawing.Size(24, 24)
+        Me.BindingNavigatorAddNewItem.Text = "Add new"
+        '
+        'BindingNavigatorCountItem
+        '
+        Me.BindingNavigatorCountItem.Name = "BindingNavigatorCountItem"
+        Me.BindingNavigatorCountItem.Size = New System.Drawing.Size(45, 24)
+        Me.BindingNavigatorCountItem.Text = "of {0}"
+        Me.BindingNavigatorCountItem.ToolTipText = "Total number of items"
+        '
+        'BindingNavigatorDeleteItem
+        '
+        Me.BindingNavigatorDeleteItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
+        Me.BindingNavigatorDeleteItem.Image = CType(resources.GetObject("BindingNavigatorDeleteItem.Image"), System.Drawing.Image)
+        Me.BindingNavigatorDeleteItem.Name = "BindingNavigatorDeleteItem"
+        Me.BindingNavigatorDeleteItem.RightToLeftAutoMirrorImage = True
+        Me.BindingNavigatorDeleteItem.Size = New System.Drawing.Size(24, 24)
+        Me.BindingNavigatorDeleteItem.Text = "Delete"
+        '
         'BindingNavigatorMoveFirstItem
         '
         Me.BindingNavigatorMoveFirstItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
         Me.BindingNavigatorMoveFirstItem.Image = CType(resources.GetObject("BindingNavigatorMoveFirstItem.Image"), System.Drawing.Image)
         Me.BindingNavigatorMoveFirstItem.Name = "BindingNavigatorMoveFirstItem"
         Me.BindingNavigatorMoveFirstItem.RightToLeftAutoMirrorImage = True
-        Me.BindingNavigatorMoveFirstItem.Size = New System.Drawing.Size(24, 22)
+        Me.BindingNavigatorMoveFirstItem.Size = New System.Drawing.Size(24, 24)
         Me.BindingNavigatorMoveFirstItem.Text = "Move first"
         '
         'BindingNavigatorMovePreviousItem
@@ -153,13 +242,13 @@ Partial Class rental
         Me.BindingNavigatorMovePreviousItem.Image = CType(resources.GetObject("BindingNavigatorMovePreviousItem.Image"), System.Drawing.Image)
         Me.BindingNavigatorMovePreviousItem.Name = "BindingNavigatorMovePreviousItem"
         Me.BindingNavigatorMovePreviousItem.RightToLeftAutoMirrorImage = True
-        Me.BindingNavigatorMovePreviousItem.Size = New System.Drawing.Size(24, 22)
+        Me.BindingNavigatorMovePreviousItem.Size = New System.Drawing.Size(24, 24)
         Me.BindingNavigatorMovePreviousItem.Text = "Move previous"
         '
         'BindingNavigatorSeparator
         '
         Me.BindingNavigatorSeparator.Name = "BindingNavigatorSeparator"
-        Me.BindingNavigatorSeparator.Size = New System.Drawing.Size(6, 25)
+        Me.BindingNavigatorSeparator.Size = New System.Drawing.Size(6, 27)
         '
         'BindingNavigatorPositionItem
         '
@@ -170,17 +259,10 @@ Partial Class rental
         Me.BindingNavigatorPositionItem.Text = "0"
         Me.BindingNavigatorPositionItem.ToolTipText = "Current position"
         '
-        'BindingNavigatorCountItem
-        '
-        Me.BindingNavigatorCountItem.Name = "BindingNavigatorCountItem"
-        Me.BindingNavigatorCountItem.Size = New System.Drawing.Size(45, 20)
-        Me.BindingNavigatorCountItem.Text = "of {0}"
-        Me.BindingNavigatorCountItem.ToolTipText = "Total number of items"
-        '
         'BindingNavigatorSeparator1
         '
-        Me.BindingNavigatorSeparator1.Name = "BindingNavigatorSeparator"
-        Me.BindingNavigatorSeparator1.Size = New System.Drawing.Size(6, 6)
+        Me.BindingNavigatorSeparator1.Name = "BindingNavigatorSeparator1"
+        Me.BindingNavigatorSeparator1.Size = New System.Drawing.Size(6, 27)
         '
         'BindingNavigatorMoveNextItem
         '
@@ -202,33 +284,15 @@ Partial Class rental
         '
         'BindingNavigatorSeparator2
         '
-        Me.BindingNavigatorSeparator2.Name = "BindingNavigatorSeparator"
-        Me.BindingNavigatorSeparator2.Size = New System.Drawing.Size(6, 6)
-        '
-        'BindingNavigatorAddNewItem
-        '
-        Me.BindingNavigatorAddNewItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
-        Me.BindingNavigatorAddNewItem.Image = CType(resources.GetObject("BindingNavigatorAddNewItem.Image"), System.Drawing.Image)
-        Me.BindingNavigatorAddNewItem.Name = "BindingNavigatorAddNewItem"
-        Me.BindingNavigatorAddNewItem.RightToLeftAutoMirrorImage = True
-        Me.BindingNavigatorAddNewItem.Size = New System.Drawing.Size(24, 24)
-        Me.BindingNavigatorAddNewItem.Text = "Add new"
-        '
-        'BindingNavigatorDeleteItem
-        '
-        Me.BindingNavigatorDeleteItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
-        Me.BindingNavigatorDeleteItem.Image = CType(resources.GetObject("BindingNavigatorDeleteItem.Image"), System.Drawing.Image)
-        Me.BindingNavigatorDeleteItem.Name = "BindingNavigatorDeleteItem"
-        Me.BindingNavigatorDeleteItem.RightToLeftAutoMirrorImage = True
-        Me.BindingNavigatorDeleteItem.Size = New System.Drawing.Size(24, 24)
-        Me.BindingNavigatorDeleteItem.Text = "Delete"
+        Me.BindingNavigatorSeparator2.Name = "BindingNavigatorSeparator2"
+        Me.BindingNavigatorSeparator2.Size = New System.Drawing.Size(6, 27)
         '
         'RentalBindingNavigatorSaveItem
         '
         Me.RentalBindingNavigatorSaveItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
         Me.RentalBindingNavigatorSaveItem.Image = CType(resources.GetObject("RentalBindingNavigatorSaveItem.Image"), System.Drawing.Image)
         Me.RentalBindingNavigatorSaveItem.Name = "RentalBindingNavigatorSaveItem"
-        Me.RentalBindingNavigatorSaveItem.Size = New System.Drawing.Size(23, 23)
+        Me.RentalBindingNavigatorSaveItem.Size = New System.Drawing.Size(24, 24)
         Me.RentalBindingNavigatorSaveItem.Text = "Save Data"
         '
         'RentalDataGridView
@@ -281,15 +345,6 @@ Partial Class rental
         Me.DataGridViewTextBoxColumn6.HeaderText = "TOTAL"
         Me.DataGridViewTextBoxColumn6.Name = "DataGridViewTextBoxColumn6"
         '
-        'Rental_idLabel
-        '
-        Rental_idLabel.AutoSize = True
-        Rental_idLabel.Location = New System.Drawing.Point(37, 47)
-        Rental_idLabel.Name = "Rental_idLabel"
-        Rental_idLabel.Size = New System.Drawing.Size(25, 17)
-        Rental_idLabel.TabIndex = 2
-        Rental_idLabel.Text = "ID:"
-        '
         'Rental_idTextBox
         '
         Me.Rental_idTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.RentalBindingSource, "rental_id", True))
@@ -297,15 +352,6 @@ Partial Class rental
         Me.Rental_idTextBox.Name = "Rental_idTextBox"
         Me.Rental_idTextBox.Size = New System.Drawing.Size(200, 22)
         Me.Rental_idTextBox.TabIndex = 3
-        '
-        'Client_idLabel
-        '
-        Client_idLabel.AutoSize = True
-        Client_idLabel.Location = New System.Drawing.Point(37, 75)
-        Client_idLabel.Name = "Client_idLabel"
-        Client_idLabel.Size = New System.Drawing.Size(60, 17)
-        Client_idLabel.TabIndex = 4
-        Client_idLabel.Text = "CLIENT:"
         '
         'Client_idComboBox
         '
@@ -316,15 +362,6 @@ Partial Class rental
         Me.Client_idComboBox.Size = New System.Drawing.Size(200, 24)
         Me.Client_idComboBox.TabIndex = 5
         '
-        'Car_idLabel
-        '
-        Car_idLabel.AutoSize = True
-        Car_idLabel.Location = New System.Drawing.Point(37, 106)
-        Car_idLabel.Name = "Car_idLabel"
-        Car_idLabel.Size = New System.Drawing.Size(40, 17)
-        Car_idLabel.TabIndex = 6
-        Car_idLabel.Text = "CAR:"
-        '
         'Car_idComboBox
         '
         Me.Car_idComboBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.RentalBindingSource, "car_id", True))
@@ -334,15 +371,6 @@ Partial Class rental
         Me.Car_idComboBox.Size = New System.Drawing.Size(200, 24)
         Me.Car_idComboBox.TabIndex = 7
         '
-        'R_dateLabel
-        '
-        R_dateLabel.AutoSize = True
-        R_dateLabel.Location = New System.Drawing.Point(37, 138)
-        R_dateLabel.Name = "R_dateLabel"
-        R_dateLabel.Size = New System.Drawing.Size(108, 17)
-        R_dateLabel.TabIndex = 8
-        R_dateLabel.Text = "RENTAL DATE:"
-        '
         'R_dateDateTimePicker
         '
         Me.R_dateDateTimePicker.DataBindings.Add(New System.Windows.Forms.Binding("Value", Me.RentalBindingSource, "R_date", True))
@@ -351,15 +379,6 @@ Partial Class rental
         Me.R_dateDateTimePicker.Size = New System.Drawing.Size(200, 22)
         Me.R_dateDateTimePicker.TabIndex = 9
         '
-        'Current_kmLabel
-        '
-        Current_kmLabel.AutoSize = True
-        Current_kmLabel.Location = New System.Drawing.Point(37, 165)
-        Current_kmLabel.Name = "Current_kmLabel"
-        Current_kmLabel.Size = New System.Drawing.Size(103, 17)
-        Current_kmLabel.TabIndex = 10
-        Current_kmLabel.Text = "CURRENT KM:"
-        '
         'Current_kmTextBox
         '
         Me.Current_kmTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.RentalBindingSource, "current_km", True))
@@ -367,15 +386,6 @@ Partial Class rental
         Me.Current_kmTextBox.Name = "Current_kmTextBox"
         Me.Current_kmTextBox.Size = New System.Drawing.Size(200, 22)
         Me.Current_kmTextBox.TabIndex = 11
-        '
-        'TotalLabel
-        '
-        TotalLabel.AutoSize = True
-        TotalLabel.Location = New System.Drawing.Point(37, 193)
-        TotalLabel.Name = "TotalLabel"
-        TotalLabel.Size = New System.Drawing.Size(58, 17)
-        TotalLabel.TabIndex = 12
-        TotalLabel.Text = "TOTAL:"
         '
         'TotalTextBox
         '
@@ -389,10 +399,6 @@ Partial Class rental
         '
         Me.ClientBindingSource.DataMember = "Client"
         Me.ClientBindingSource.DataSource = Me.AYZAN_GROUPDataSet
-        '
-        'ClientTableAdapter
-        '
-        Me.ClientTableAdapter.ClearBeforeFill = True
         '
         'ClientDataGridView
         '
@@ -428,10 +434,6 @@ Partial Class rental
         '
         Me.CarBindingSource.DataMember = "Car"
         Me.CarBindingSource.DataSource = Me.AYZAN_GROUPDataSet
-        '
-        'CarTableAdapter
-        '
-        Me.CarTableAdapter.ClearBeforeFill = True
         '
         'CarDataGridView
         '
@@ -503,12 +505,22 @@ Partial Class rental
         Me.Button1.Text = "BACK"
         Me.Button1.UseVisualStyleBackColor = True
         '
+        'DataGridView1
+        '
+        Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.DataGridView1.Location = New System.Drawing.Point(688, 75)
+        Me.DataGridView1.Name = "DataGridView1"
+        Me.DataGridView1.RowTemplate.Height = 24
+        Me.DataGridView1.Size = New System.Drawing.Size(438, 150)
+        Me.DataGridView1.TabIndex = 18
+        '
         'rental
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.SystemColors.AppWorkspace
         Me.ClientSize = New System.Drawing.Size(1174, 591)
+        Me.Controls.Add(Me.DataGridView1)
         Me.Controls.Add(Me.Button1)
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.CarDataGridView)
@@ -539,6 +551,7 @@ Partial Class rental
         CType(Me.ClientDataGridView, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.CarBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.CarDataGridView, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -589,4 +602,5 @@ Partial Class rental
     Friend WithEvents DataGridViewTextBoxColumn14 As DataGridViewTextBoxColumn
     Friend WithEvents Label1 As Label
     Friend WithEvents Button1 As Button
+    Friend WithEvents DataGridView1 As DataGridView
 End Class
